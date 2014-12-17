@@ -4,7 +4,7 @@
 
   <!-- Domain model configuration -->
   <solutionClass>org.optaplanner.examples.cloudbalancing.domain.CloudBalance</solutionClass>
-  <entityClass>org.optaplanner.examples.cloudbalancing.domain.CloudProcess</entityClass>
+  <entityClass>org.optaplanner.examples.cloudbalancing.domain.CloudComputer</entityClass>
 
   <!-- Score configuration -->
   <scoreDirectorFactory>

@@ -19,11 +19,8 @@ package org.optaplanner.examples.cloudbalancing.domain;
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import org.optaplanner.core.api.domain.entity.PlanningEntity;
 import org.optaplanner.core.api.domain.variable.PlanningVariable;
-import org.optaplanner.examples.cloudbalancing.domain.solver.CloudComputerStrengthComparator;
-import org.optaplanner.examples.cloudbalancing.domain.solver.CloudProcessDifficultyComparator;
 import org.optaplanner.examples.common.domain.AbstractPersistable;
 
-@PlanningEntity(difficultyComparatorClass = CloudProcessDifficultyComparator.class)
 @XStreamAlias("CloudProcess")
 public class CloudProcess extends AbstractPersistable {
 
@@ -58,8 +55,6 @@ public class CloudProcess extends AbstractPersistable {
         this.requiredNetworkBandwidth = requiredNetworkBandwidth;
     }
 
-    @PlanningVariable(valueRangeProviderRefs = {"computerRange"},
-            strengthComparatorClass = CloudComputerStrengthComparator.class)
     public CloudComputer getComputer() {
         return computer;
     }

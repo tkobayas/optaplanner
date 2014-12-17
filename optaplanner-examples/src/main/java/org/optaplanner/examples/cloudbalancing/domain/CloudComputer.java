@@ -16,9 +16,17 @@
 
 package org.optaplanner.examples.cloudbalancing.domain;
 
+import java.util.List;
+
 import com.thoughtworks.xstream.annotations.XStreamAlias;
+
+import org.optaplanner.core.api.domain.entity.PlanningEntity;
+import org.optaplanner.core.api.domain.variable.PlanningVariable;
+import org.optaplanner.examples.cloudbalancing.domain.solver.CloudComputerDifficultyComparator;
+import org.optaplanner.examples.cloudbalancing.domain.solver.CloudProcessStrengthComparator;
 import org.optaplanner.examples.common.domain.AbstractPersistable;
 
+@PlanningEntity(difficultyComparatorClass = CloudComputerDifficultyComparator.class)
 @XStreamAlias("CloudComputer")
 public class CloudComputer extends AbstractPersistable {
 
@@ -27,7 +35,19 @@ public class CloudComputer extends AbstractPersistable {
     private int networkBandwidth; // in gigabyte per hour
     private int cost; // in euro per month
 
-    public int getCpuPower() {
+    private List<CloudProcess> processList;
+    
+    @PlanningVariable(valueRangeProviderRefs = {"processRange"},
+            strengthComparatorClass = CloudProcessStrengthComparator.class)
+    public List<CloudProcess> getProcessList() {
+		return processList;
+	}
+
+	public void setProcessList(List<CloudProcess> processList) {
+		this.processList = processList;
+	}
+
+	public int getCpuPower() {
         return cpuPower;
     }
 

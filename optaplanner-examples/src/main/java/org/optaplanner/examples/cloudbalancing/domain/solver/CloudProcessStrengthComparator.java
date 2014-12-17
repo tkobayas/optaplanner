@@ -20,9 +20,10 @@ import java.io.Serializable;
 import java.util.Comparator;
 
 import org.apache.commons.lang.builder.CompareToBuilder;
+import org.optaplanner.examples.cloudbalancing.domain.CloudComputer;
 import org.optaplanner.examples.cloudbalancing.domain.CloudProcess;
 
-public class CloudProcessDifficultyComparator implements Comparator<CloudProcess>, Serializable {
+public class CloudProcessStrengthComparator implements Comparator<CloudProcess>, Serializable {
 
     public int compare(CloudProcess a, CloudProcess b) {
         return new CompareToBuilder()

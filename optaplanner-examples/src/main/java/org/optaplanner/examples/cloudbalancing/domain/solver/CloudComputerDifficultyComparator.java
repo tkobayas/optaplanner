@@ -21,13 +21,14 @@ import java.util.Comparator;
 
 import org.apache.commons.lang.builder.CompareToBuilder;
 import org.optaplanner.examples.cloudbalancing.domain.CloudComputer;
+import org.optaplanner.examples.cloudbalancing.domain.CloudProcess;
 
-public class CloudComputerStrengthComparator implements Comparator<CloudComputer>, Serializable {
+public class CloudComputerDifficultyComparator implements Comparator<CloudComputer>, Serializable {
 
     public int compare(CloudComputer a, CloudComputer b) {
         return new CompareToBuilder()
-                .append(a.getMultiplicand(), b.getMultiplicand())
-                .append(b.getCost(), a.getCost()) // Descending (but this is debatable)
+        		.append(b.getCost(), a.getCost()) // descendant
+        		.append(b.getMultiplicand(), a.getMultiplicand()) // descendant
                 .append(a.getId(), b.getId())
                 .toComparison();
     }

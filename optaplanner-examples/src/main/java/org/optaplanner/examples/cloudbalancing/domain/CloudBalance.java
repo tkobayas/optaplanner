@@ -42,7 +42,8 @@ public class CloudBalance extends AbstractPersistable implements Solution<HardSo
     @XStreamConverter(value = XStreamScoreConverter.class, types = {HardSoftScoreDefinition.class})
     private HardSoftScore score;
 
-    @ValueRangeProvider(id = "computerRange")
+    
+    @PlanningEntityCollectionProperty
     public List<CloudComputer> getComputerList() {
         return computerList;
     }
@@ -51,7 +52,8 @@ public class CloudBalance extends AbstractPersistable implements Solution<HardSo
         this.computerList = computerList;
     }
 
-    @PlanningEntityCollectionProperty
+    
+    @ValueRangeProvider(id = "processRange")
     public List<CloudProcess> getProcessList() {
         return processList;
     }
