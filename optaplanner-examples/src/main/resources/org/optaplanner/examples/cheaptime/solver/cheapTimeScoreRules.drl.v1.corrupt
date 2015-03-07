@@ -75,7 +75,6 @@ rule "startTimeLimitsFrom"
     when
         $taskAssignment : TaskAssignment($task : task, $startPeriod : startPeriod < $task.startPeriodRangeFrom)
     then
-        //System.out.println("startTimeLimitsFrom");
         scoreHolder.addHardConstraintMatch(kcontext, $startPeriod - $task.getStartPeriodRangeFrom());
 end
 
@@ -83,7 +82,6 @@ rule "startTimeLimitsTo"
     when
         $taskAssignment : TaskAssignment($task : task, $startPeriod : startPeriod >= $task.startPeriodRangeTo)
     then
-        //System.out.println("startTimeLimitsTo");
         scoreHolder.addHardConstraintMatch(kcontext, $task.getStartPeriodRangeTo() - $startPeriod);
 end
 
@@ -92,14 +90,11 @@ rule "maximumCapacity"
     when
         $machinePeriodPart : MachinePeriodPart()
     then
-        long resourceAvailableTotal = 0;
         for (int resourceAvailable : $machinePeriodPart.getResourceAvailableList()) {
             if (resourceAvailable < 0) {
-                //System.out.println("resourceCapacity : " + $machinePeriodPart + ", resourceAvailable = " + resourceAvailable);
-                resourceAvailableTotal += resourceAvailable;
+                scoreHolder.addHardConstraintMatch(kcontext, resourceAvailable);
             }
         }
-        scoreHolder.addHardConstraintMatch(kcontext, resourceAvailableTotal);
 end
 
 // Startup and shutdown: each machine must be active in the periods during which it has assigned tasks.

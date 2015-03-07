@@ -1,0 +1,307 @@
+<CtCheapTimeSolution id="1">
+  <id>0</id>
+  <timeResolutionInMinutes>5</timeResolutionInMinutes>
+  <globalPeriodRangeFrom>0</globalPeriodRangeFrom>
+  <globalPeriodRangeTo>20</globalPeriodRangeTo>
+  <resourceList id="2">
+    <CtResource id="3">
+      <id>0</id>
+      <index>0</index>
+    </CtResource>
+    <CtResource id="4">
+      <id>1</id>
+      <index>1</index>
+    </CtResource>
+  </resourceList>
+  <machineList id="6">
+    <CtMachine id="7">
+      <id>0</id>
+      <index>0</index>
+      <powerConsumptionMicros>1000000000000</powerConsumptionMicros>
+      <spinUpDownCostMicros>500</spinUpDownCostMicros>
+      <machineCapacityList id="8">
+        <CtMachineCapacity id="9">
+          <id>0</id>
+          <machine reference="7"/>
+          <resource reference="3"/>
+          <capacity>2000</capacity>
+        </CtMachineCapacity>
+        <CtMachineCapacity id="10">
+          <id>1</id>
+          <machine reference="7"/>
+          <resource reference="4"/>
+          <capacity>2000</capacity>
+        </CtMachineCapacity>
+      </machineCapacityList>
+    </CtMachine>
+    <CtMachine id="12">
+      <id>1</id>
+      <index>1</index>
+      <powerConsumptionMicros>2000000000000</powerConsumptionMicros>
+      <spinUpDownCostMicros>500</spinUpDownCostMicros>
+      <machineCapacityList id="13">
+        <CtMachineCapacity id="14">
+          <id>3</id>
+          <machine reference="12"/>
+          <resource reference="3"/>
+          <capacity>2000</capacity>
+        </CtMachineCapacity>
+        <CtMachineCapacity id="15">
+          <id>4</id>
+          <machine reference="12"/>
+          <resource reference="4"/>
+          <capacity>2000</capacity>
+        </CtMachineCapacity>
+      </machineCapacityList>
+    </CtMachine>
+  </machineList>
+  <machineCapacityList id="17">
+    <CtMachineCapacity reference="9"/>
+    <CtMachineCapacity reference="10"/>
+    <CtMachineCapacity reference="14"/>
+    <CtMachineCapacity reference="15"/>
+  </machineCapacityList>
+  <taskList id="18">
+    <CtTask id="19">
+      <id>0</id>
+      <powerConsumptionMicros>1000000000000</powerConsumptionMicros>
+      <duration>1</duration>
+      <startPeriodRangeFrom>0</startPeriodRangeFrom>
+      <startPeriodRangeTo>10</startPeriodRangeTo>
+      <taskRequirementList id="20">
+        <CtTaskRequirement id="21">
+          <id>0</id>
+          <task reference="19"/>
+          <resource reference="3"/>
+          <resourceUsage>1000</resourceUsage>
+        </CtTaskRequirement>
+        <CtTaskRequirement id="22">
+          <id>1</id>
+          <task reference="19"/>
+          <resource reference="4"/>
+          <resourceUsage>1000</resourceUsage>
+        </CtTaskRequirement>
+      </taskRequirementList>
+    </CtTask>
+    <CtTask id="24">
+      <id>1</id>
+      <powerConsumptionMicros>1000000000000</powerConsumptionMicros>
+      <duration>2</duration>
+      <startPeriodRangeFrom>0</startPeriodRangeFrom>
+      <startPeriodRangeTo>7</startPeriodRangeTo>
+      <taskRequirementList id="25">
+        <CtTaskRequirement id="26">
+          <id>3</id>
+          <task reference="24"/>
+          <resource reference="3"/>
+          <resourceUsage>1000</resourceUsage>
+        </CtTaskRequirement>
+        <CtTaskRequirement id="27">
+          <id>4</id>
+          <task reference="24"/>
+          <resource reference="4"/>
+          <resourceUsage>1000</resourceUsage>
+        </CtTaskRequirement>
+      </taskRequirementList>
+    </CtTask>
+    <CtTask id="29">
+      <id>2</id>
+      <powerConsumptionMicros>1000000000000</powerConsumptionMicros>
+      <duration>3</duration>
+      <startPeriodRangeFrom>6</startPeriodRangeFrom>
+      <startPeriodRangeTo>16</startPeriodRangeTo>
+      <taskRequirementList id="30">
+        <CtTaskRequirement id="31">
+          <id>6</id>
+          <task reference="29"/>
+          <resource reference="3"/>
+          <resourceUsage>1500</resourceUsage>
+        </CtTaskRequirement>
+        <CtTaskRequirement id="32">
+          <id>7</id>
+          <task reference="29"/>
+          <resource reference="4"/>
+          <resourceUsage>1000</resourceUsage>
+        </CtTaskRequirement>
+      </taskRequirementList>
+    </CtTask>
+    <CtTask id="34">
+      <id>3</id>
+      <powerConsumptionMicros>1000000000000</powerConsumptionMicros>
+      <duration>4</duration>
+      <startPeriodRangeFrom>3</startPeriodRangeFrom>
+      <startPeriodRangeTo>7</startPeriodRangeTo>
+      <taskRequirementList id="35">
+        <CtTaskRequirement id="36">
+          <id>9</id>
+          <task reference="34"/>
+          <resource reference="3"/>
+          <resourceUsage>500</resourceUsage>
+        </CtTaskRequirement>
+        <CtTaskRequirement id="37">
+          <id>10</id>
+          <task reference="34"/>
+          <resource reference="4"/>
+          <resourceUsage>2000</resourceUsage>
+        </CtTaskRequirement>
+      </taskRequirementList>
+    </CtTask>
+    <CtTask id="39">
+      <id>4</id>
+      <powerConsumptionMicros>10000000000000</powerConsumptionMicros>
+      <duration>5</duration>
+      <startPeriodRangeFrom>2</startPeriodRangeFrom>
+      <startPeriodRangeTo>8</startPeriodRangeTo>
+      <taskRequirementList id="40">
+        <CtTaskRequirement id="41">
+          <id>12</id>
+          <task reference="39"/>
+          <resource reference="3"/>
+          <resourceUsage>2000</resourceUsage>
+        </CtTaskRequirement>
+        <CtTaskRequirement id="42">
+          <id>13</id>
+          <task reference="39"/>
+          <resource reference="4"/>
+          <resourceUsage>1000</resourceUsage>
+        </CtTaskRequirement>
+      </taskRequirementList>
+    </CtTask>
+  </taskList>
+  <taskRequirementList id="144">
+    <CtTaskRequirement reference="21"/>
+    <CtTaskRequirement reference="22"/>
+    <CtTaskRequirement reference="26"/>
+    <CtTaskRequirement reference="27"/>
+    <CtTaskRequirement reference="31"/>
+    <CtTaskRequirement reference="32"/>
+    <CtTaskRequirement reference="36"/>
+    <CtTaskRequirement reference="37"/>
+    <CtTaskRequirement reference="41"/>
+    <CtTaskRequirement reference="42"/>
+  </taskRequirementList>
+  <periodPowerPriceList id="145">
+    <CtPeriodPowerPrice id="146">
+      <id>0</id>
+      <period>0</period>
+      <powerPriceMicros>1</powerPriceMicros>
+    </CtPeriodPowerPrice>
+    <CtPeriodPowerPrice id="147">
+      <id>1</id>
+      <period>1</period>
+      <powerPriceMicros>1</powerPriceMicros>
+    </CtPeriodPowerPrice>
+    <CtPeriodPowerPrice id="148">
+      <id>2</id>
+      <period>2</period>
+      <powerPriceMicros>1</powerPriceMicros>
+    </CtPeriodPowerPrice>
+    <CtPeriodPowerPrice id="149">
+      <id>3</id>
+      <period>3</period>
+      <powerPriceMicros>5</powerPriceMicros>
+    </CtPeriodPowerPrice>
+    <CtPeriodPowerPrice id="150">
+      <id>4</id>
+      <period>4</period>
+      <powerPriceMicros>5</powerPriceMicros>
+    </CtPeriodPowerPrice>
+    <CtPeriodPowerPrice id="151">
+      <id>5</id>
+      <period>5</period>
+      <powerPriceMicros>5</powerPriceMicros>
+    </CtPeriodPowerPrice>
+    <CtPeriodPowerPrice id="152">
+      <id>6</id>
+      <period>6</period>
+      <powerPriceMicros>5</powerPriceMicros>
+    </CtPeriodPowerPrice>
+    <CtPeriodPowerPrice id="153">
+      <id>7</id>
+      <period>7</period>
+      <powerPriceMicros>5</powerPriceMicros>
+    </CtPeriodPowerPrice>
+    <CtPeriodPowerPrice id="154">
+      <id>8</id>
+      <period>8</period>
+      <powerPriceMicros>5</powerPriceMicros>
+    </CtPeriodPowerPrice>
+    <CtPeriodPowerPrice id="155">
+      <id>9</id>
+      <period>9</period>
+      <powerPriceMicros>100</powerPriceMicros>
+    </CtPeriodPowerPrice>
+    <CtPeriodPowerPrice id="156">
+      <id>10</id>
+      <period>10</period>
+      <powerPriceMicros>100</powerPriceMicros>
+    </CtPeriodPowerPrice>
+    <CtPeriodPowerPrice id="157">
+      <id>11</id>
+      <period>11</period>
+      <powerPriceMicros>5</powerPriceMicros>
+    </CtPeriodPowerPrice>
+    <CtPeriodPowerPrice id="158">
+      <id>12</id>
+      <period>12</period>
+      <powerPriceMicros>5</powerPriceMicros>
+    </CtPeriodPowerPrice>
+    <CtPeriodPowerPrice id="159">
+      <id>13</id>
+      <period>13</period>
+      <powerPriceMicros>5</powerPriceMicros>
+    </CtPeriodPowerPrice>
+    <CtPeriodPowerPrice id="160">
+      <id>14</id>
+      <period>14</period>
+      <powerPriceMicros>5</powerPriceMicros>
+    </CtPeriodPowerPrice>
+    <CtPeriodPowerPrice id="161">
+      <id>15</id>
+      <period>15</period>
+      <powerPriceMicros>5</powerPriceMicros>
+    </CtPeriodPowerPrice>
+    <CtPeriodPowerPrice id="162">
+      <id>16</id>
+      <period>16</period>
+      <powerPriceMicros>5</powerPriceMicros>
+    </CtPeriodPowerPrice>
+    <CtPeriodPowerPrice id="163">
+      <id>17</id>
+      <period>17</period>
+      <powerPriceMicros>5</powerPriceMicros>
+    </CtPeriodPowerPrice>
+    <CtPeriodPowerPrice id="164">
+      <id>18</id>
+      <period>18</period>
+      <powerPriceMicros>5</powerPriceMicros>
+    </CtPeriodPowerPrice>
+    <CtPeriodPowerPrice id="165">
+      <id>19</id>
+      <period>19</period>
+      <powerPriceMicros>5</powerPriceMicros>
+    </CtPeriodPowerPrice>
+  </periodPowerPriceList>
+  <taskAssignmentList id="434">
+    <CtTaskAssignment id="435">
+      <id>0</id>
+      <task reference="19"/>
+    </CtTaskAssignment>
+    <CtTaskAssignment id="436">
+      <id>1</id>
+      <task reference="24"/>
+    </CtTaskAssignment>
+    <CtTaskAssignment id="437">
+      <id>2</id>
+      <task reference="29"/>
+    </CtTaskAssignment>
+    <CtTaskAssignment id="438">
+      <id>3</id>
+      <task reference="34"/>
+    </CtTaskAssignment>
+    <CtTaskAssignment id="439">
+      <id>4</id>
+      <task reference="39"/>
+    </CtTaskAssignment>
+  </taskAssignmentList>
+</CtCheapTimeSolution>
