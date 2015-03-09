@@ -29,7 +29,7 @@
       </constructionHeuristic>
       <localSearch>
         <termination>
-          <stepCountLimit>5000</stepCountLimit>
+          <stepCountLimit>3000</stepCountLimit>
         </termination>
         <unionMoveSelector>
           <changeMoveSelector>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <solver>
-  <!--<environmentMode>FULL_ASSERT</environmentMode>-->
+<!--   <environmentMode>FULL_ASSERT</environmentMode> -->
 
   <!-- Domain model configuration -->
   <solutionClass>org.optaplanner.examples.cheaptime.domain.CheapTimeSolution</solutionClass>
@@ -13,9 +13,9 @@
 <!--     <incrementalScoreCalculatorClass>org.optaplanner.examples.cheaptime.solver.score.CheapTimeIncrementalScoreCalculator</incrementalScoreCalculatorClass> -->
     <scoreDrl>org/optaplanner/examples/cheaptime/solver/cheapTimeScoreRules.drl</scoreDrl>
     <initializingScoreTrend>ONLY_DOWN</initializingScoreTrend>
-    <!--<assertionScoreDirectorFactory>-->
-      <!--<easyScoreCalculatorClass>org.optaplanner.examples.cheaptime.solver.score.CheapTimeEasyScoreCalculator</easyScoreCalculatorClass>-->
-    <!--</assertionScoreDirectorFactory>-->
+<!--     <assertionScoreDirectorFactory> -->
+<!--       <easyScoreCalculatorClass>org.optaplanner.examples.cheaptime.solver.score.CheapTimeEasyScoreCalculator</easyScoreCalculatorClass> -->
+<!--     </assertionScoreDirectorFactory> -->
   </scoreDirectorFactory>
 
   <!-- Optimization algorithms configuration -->
