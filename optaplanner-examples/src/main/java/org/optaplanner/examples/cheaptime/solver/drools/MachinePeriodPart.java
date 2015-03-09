@@ -14,63 +14,69 @@ import org.optaplanner.examples.cheaptime.domain.TaskRequirement;
 public class MachinePeriodPart {
     private final Machine machine;
     private final int period;
-    private final List<TaskAssignment> taskAssignmentList;
 
-    private MachinePeriodStatus status;
-    private List<Integer> resourceAvailableList;
+    private boolean active;
+    private int[] resourceAvailableList;
+    private int resourceInShortTotal;
 
     public MachinePeriodPart(Machine machine, int period, int resourceListSize, List<TaskAssignment> taskAssignmentList) {
         this.machine = machine;
         this.period = period;
-        this.taskAssignmentList = taskAssignmentList;
         
-        status = MachinePeriodStatus.OFF;
-        resourceAvailableList = new ArrayList<Integer>(resourceListSize);
+        active = false;
+        
+        resourceAvailableList = new int[resourceListSize];
         for (int i = 0; i < resourceListSize; i++) {
-            resourceAvailableList.add(machine.getMachineCapacityList().get(i).getCapacity());
+            resourceAvailableList[i] = machine.getMachineCapacityList().get(i).getCapacity();
         }
 
         for (TaskAssignment taskAssignment : taskAssignmentList) {
             addTaskAssignment(taskAssignment);
         }
+        
+	    resourceInShortTotal = 0;
+	    for (int resourceAvailable : resourceAvailableList) {
+	        if (resourceAvailable < 0) {
+	            resourceInShortTotal += resourceAvailable;
+	        }
+	    }
     }
 
     private void addTaskAssignment(TaskAssignment taskAssignment) {
-        status = MachinePeriodStatus.ACTIVE;
+        active = true;
         Task task = taskAssignment.getTask();
-        for (int i = 0; i < resourceAvailableList.size(); i++) {
-            int resourceAvailable = resourceAvailableList.get(i);
+        for (int i = 0; i < resourceAvailableList.length; i++) {
             TaskRequirement taskRequirement = task.getTaskRequirementList().get(i);
-            resourceAvailableList.set(i, resourceAvailable - taskRequirement.getResourceUsage());
+            resourceAvailableList[i] -=  taskRequirement.getResourceUsage();
         }
     }
 
-    public MachinePeriodStatus getStatus() {
-        return status;
-    }
+	public boolean isActive() {
+		return active;
+	}
 
-    public void setStatus(MachinePeriodStatus status) {
-        this.status = status;
-    }
+	public void setActive(boolean active) {
+		this.active = active;
+	}
 
-    public List<Integer> getResourceAvailableList() {
+	public int[] getResourceAvailableList() {
         return resourceAvailableList;
     }
 
-    public void setResourceAvailableList(List<Integer> resourceAvailableList) {
+    public void setResourceAvailableList(int[] resourceAvailableList) {
         this.resourceAvailableList = resourceAvailableList;
     }
 
+    public int getResourceInShortTotal() {
+		return resourceInShortTotal;
+	}
+    
     public Machine getMachine() {
         return machine;
     }
 
     public int getPeriod() {
         return period;
-    }
-    
-    public List<TaskAssignment> getTaskAssignmentList() {
-        return taskAssignmentList;
     }
 
     public boolean equals(Object o) {
@@ -81,9 +87,8 @@ public class MachinePeriodPart {
             return new EqualsBuilder()
                     .append(machine, other.machine)
                     .append(period, other.period)
-                    .append(status, other.status)
+                    .append(active, other.active)
                     .append(resourceAvailableList, other.resourceAvailableList)
-                    .append(taskAssignmentList, other.taskAssignmentList)
                     .isEquals();
         } else {
             return false;
@@ -94,9 +99,8 @@ public class MachinePeriodPart {
         return new HashCodeBuilder()
                 .append(machine)
                 .append(period)
-                .append(status)
+                .append(active)
                 .append(resourceAvailableList)
-                .append(taskAssignmentList)
                 .toHashCode();
     }
 
@@ -104,14 +108,13 @@ public class MachinePeriodPart {
         return new CompareToBuilder()
                 .append(machine, other.machine)
                 .append(period, other.period)
-                .append(status, other.status)
+                .append(active, other.active)
                 .append(resourceAvailableList, other.resourceAvailableList)
-                .append(taskAssignmentList, other.taskAssignmentList)
                 .toComparison();
     }
 
     @Override
     public String toString() {
-        return machine + ", period = " + period + ", status = " + status + ", resourceAvailableList = " + resourceAvailableList + ", taskAssignmentList = " + taskAssignmentList;
+        return machine + ", period = " + period + ", active = " + active + ", resourceAvailableList = " + resourceAvailableList;
     }
 }

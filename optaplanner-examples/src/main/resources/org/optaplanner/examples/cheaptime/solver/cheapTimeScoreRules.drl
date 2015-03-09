@@ -59,11 +59,10 @@ rule "machinePeriodPart"
             TaskAssignment(
                 machine == $machine,
                 startPeriod <= $period,
-                $task: task,
-                startPeriod + $task.duration > $period)
+                endPeriod > $period)
         )
     then
-        insertLogical(new MachinePeriodPart($machine, $period, $resourceList.size(), $taskAssignmentList));
+       	insertLogical(new MachinePeriodPart($machine, $period, $resourceList.size(), $taskAssignmentList));
 end
 
 // ############################################################################
@@ -86,17 +85,11 @@ rule "startTimeLimitsTo"
 end
 
 // Maximum capacity: the maximum capacity for each resource for each machine must not be exceeded.
-rule "maximumCapacity"
+rule "maximumCapacity" // resourceInShortTotal is calculated in MachinePeriodPart constructor
     when
-        $machinePeriodPart : MachinePeriodPart()
+        MachinePeriodPart($resourceInShortTotal : resourceInShortTotal < 0)
     then
-        long resourceAvailableTotal = 0;
-        for (int resourceAvailable : $machinePeriodPart.getResourceAvailableList()) {
-            if (resourceAvailable < 0) {
-                resourceAvailableTotal += resourceAvailable;
-            }
-        }
-        scoreHolder.addHardConstraintMatch(kcontext, resourceAvailableTotal);
+       	scoreHolder.addHardConstraintMatch(kcontext, $resourceInShortTotal);
 end
 
 // Startup and shutdown: each machine must be active in the periods during which it has assigned tasks.
@@ -116,11 +109,11 @@ end
 rule "calculateIdleCost"
     salience 1
     when
-        MachinePeriodPart($machine : machine, $period : period, status == MachinePeriodStatus.ACTIVE)
-        exists MachinePeriodPart(machine == $machine, period < $period, status == MachinePeriodStatus.ACTIVE)
-        exists MachinePeriodPart(machine == $machine, period == $period - 1, status == MachinePeriodStatus.OFF)
+        MachinePeriodPart($machine : machine, $period : period, active == true)
+        exists MachinePeriodPart(machine == $machine, period == $period - 1, active == false)
+        exists MachinePeriodPart(machine == $machine, period < $period - 1, active == true)
         accumulate (
-            MachinePeriodPart(machine == $machine, $activePeriod : period < $period, status == MachinePeriodStatus.ACTIVE);
+            MachinePeriodPart(machine == $machine, $activePeriod : period < $period - 1, active == true);
             $lastActivePeriod : max($activePeriod)
         )
         $idlePeriodPowerPriceList : ArrayList() from collect (
@@ -139,7 +132,7 @@ end
 
 rule "machinePowerCostActive"
     when
-        MachinePeriodPart($machine : machine, $period : period, status == MachinePeriodStatus.ACTIVE)
+        MachinePeriodPart($machine : machine, $period : period, active == true)
         $periodPowerPrice : PeriodPowerPrice(period == $period)
     then
         scoreHolder.addMediumConstraintMatch(kcontext,
@@ -148,7 +141,7 @@ end
 
 rule "machinePowerCostOffToActive"
     when
-        MachinePeriodPart($machine : machine, $period : period, status == MachinePeriodStatus.ACTIVE)
+        MachinePeriodPart($machine : machine, $period : period, active == true)
         IdleCost(machine == $machine, activePeriodAfterIdle == $period, $idleCost : cost >= $machine.spinUpDownCostMicros)
     then
         scoreHolder.addMediumConstraintMatch(kcontext, - $machine.getSpinUpDownCostMicros());
@@ -156,7 +149,7 @@ end
 
 rule "machinePowerCostIdleToActive"
     when
-        MachinePeriodPart($machine : machine, $period : period, status == MachinePeriodStatus.ACTIVE)
+        MachinePeriodPart($machine : machine, $period : period, active == true)
         IdleCost(machine == $machine, activePeriodAfterIdle == $period, $idleCost : cost < $machine.spinUpDownCostMicros)
     then
         scoreHolder.addMediumConstraintMatch(kcontext, - $idleCost);
@@ -164,8 +157,8 @@ end
 
 rule "firstBoot"
     when
-        MachinePeriodPart($machine : machine, $period : period, status == MachinePeriodStatus.ACTIVE)
-        not MachinePeriodPart(machine == $machine, period < $period, status == MachinePeriodStatus.ACTIVE);
+        MachinePeriodPart($machine : machine, $period : period, active == true)
+        not MachinePeriodPart(machine == $machine, period < $period, active == true);
     then
         scoreHolder.addMediumConstraintMatch(kcontext, - $machine.getSpinUpDownCostMicros());
 end
@@ -173,8 +166,8 @@ end
 // Task power cost: Each task consumes power too, which infers a power cost (depending on the power price during its time).
 rule "taskPowerCost"
     when
-        MachinePeriodPart($period : period, status == MachinePeriodStatus.ACTIVE, $taskAssignmentList : taskAssignmentList)
-        TaskAssignment(this memberOf $taskAssignmentList, $task : task)
+        Period($period : period)
+        TaskAssignment(startPeriod <= $period, endPeriod > $period, $task : task)
         $periodPowerPrice : PeriodPowerPrice(period == $period)
     then
         scoreHolder.addMediumConstraintMatch(kcontext,
