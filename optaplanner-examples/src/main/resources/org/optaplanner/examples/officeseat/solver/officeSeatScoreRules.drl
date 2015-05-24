@@ -1,0 +1,60 @@
+/*
+ * Copyright 2010 JBoss Inc
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+package org.optaplanner.examples.officeseat.solver;
+    dialect "java"
+
+import org.optaplanner.core.api.score.buildin.hardsoftlong.HardSoftLongScoreHolder;
+
+import org.optaplanner.examples.officeseat.domain.Employee;
+
+global HardSoftLongScoreHolder scoreHolder;
+
+rule "cannot share a seat"
+    when
+        $emp1 : Employee()
+        $emp2 : Employee(this != $emp1, seat == $emp1.seat)
+    then
+        scoreHolder.addHardConstraintMatch(kcontext, -1);
+end
+
+
+rule "jobDomain distance"
+    when
+        $emp1 : Employee(seat != null)
+        $emp2 : Employee(code > $emp1.code, seat != null, jobDomain == $emp1.jobDomain)
+    then
+    	long distance = $emp1.getSeat().getDistance($emp2.getSeat());
+        scoreHolder.addSoftConstraintMatch(kcontext, -10 * distance);
+end
+
+rule "jobRole distance"
+    when
+        $emp1 : Employee(seat != null)
+        $emp2 : Employee(code > $emp1.code, seat != null, jobRole == $emp1.jobRole)
+    then
+    	long distance = $emp1.getSeat().getDistance($emp2.getSeat());
+        scoreHolder.addSoftConstraintMatch(kcontext, -10 * distance);
+end
+
+rule "SBR distance"
+    when
+        $emp1 : Employee(seat != null)
+        $emp2 : Employee(code > $emp1.code, seat != null, isSubjectMatterOverlapped($emp1))
+    then
+    	long distance = $emp1.getSeat().getDistance($emp2.getSeat());
+        scoreHolder.addSoftConstraintMatch(kcontext, -10 * distance);
+end
