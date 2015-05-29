@@ -34,6 +34,7 @@ import org.optaplanner.examples.common.swingui.TangoColorFactory;
 import org.optaplanner.examples.officeseat.domain.Employee;
 import org.optaplanner.examples.officeseat.domain.OfficeSeat;
 import org.optaplanner.examples.officeseat.domain.Seat;
+import org.optaplanner.examples.officeseat.domain.SubjectMatter;
 
 
 public class OfficeSeatPanel extends SolutionPanel {
@@ -100,15 +101,25 @@ public class OfficeSeatPanel extends SolutionPanel {
                 add(new JLabel("Empty seat"), BorderLayout.CENTER);
                 return;
             }
-            JPanel infoPanel = new JPanel(new GridLayout(0, 1));
-            infoPanel.setOpaque(false);
-            infoPanel.add(new JLabel(employee.getName()));
+            Seat seat = employee.getSeat();
+//        	if (seat != null) {
+//        		infoPanel.add(new JLabel("col = " + seat.getCol() + ", row = " + seat.getRow() ), BorderLayout.NORTH);
+//        	}
+
             JPanel jobPanel = new JPanel();
             jobPanel.setLayout(new BoxLayout(jobPanel, BoxLayout.Y_AXIS));
             jobPanel.setOpaque(false);
+            jobPanel.add(new JLabel(employee.getName()));
+            jobPanel.setOpaque(false);
             jobPanel.add(new JLabel(employee.getJobDomain().getCode() + "_" + employee.getJobRole().getCode()));
-            infoPanel.add(jobPanel);
-            add(infoPanel, BorderLayout.CENTER);
+            List<SubjectMatter> subjectMatterList = employee.getSubjectMatterList();
+            for (SubjectMatter subjectMatter : subjectMatterList) {
+            	System.out.println(employee);
+            	System.out.println(subjectMatter.getCode());
+            	jobPanel.add(new JLabel(subjectMatter.getCode().substring(0, subjectMatter.getCode().length() > 10 ? 10 : subjectMatter.getCode().length())));
+			}
+
+            add(jobPanel, BorderLayout.CENTER);
         }
 
     }

@@ -1,0 +1,689 @@
+<OfficeSeatArrangement id="1">
+  <id>0</id>
+  <employeeList id="2">
+    <Employee id="3">
+      <id>0</id>
+      <code>1</code>
+      <name>Employee 1</name>
+      <jobDomain>MW</jobDomain>
+      <jobRole>TSE</jobRole>
+      <subjectMatterList id="4">
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>Spinalstack</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>Stack</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>FuseSource</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+      </subjectMatterList>
+    </Employee>
+    <Employee id="5">
+      <id>1</id>
+      <code>2</code>
+      <name>Employee 2</name>
+      <jobDomain>PL</jobDomain>
+      <jobRole>ENG</jobRole>
+      <subjectMatterList id="6">
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>SAP</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>JBoss_Base_AS</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>Tools</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+      </subjectMatterList>
+    </Employee>
+    <Employee id="7">
+      <id>2</id>
+      <code>3</code>
+      <name>Employee 3</name>
+      <jobDomain>MW</jobDomain>
+      <jobRole>SEG</jobRole>
+      <subjectMatterList id="8">
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>ESB</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>Gluster</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>Networking</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+      </subjectMatterList>
+    </Employee>
+    <Employee id="9">
+      <id>3</id>
+      <code>4</code>
+      <name>Employee 4</name>
+      <jobDomain>MW</jobDomain>
+      <jobRole>ENG</jobRole>
+      <subjectMatterList id="10">
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>Containers</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>FuseSource</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>SAP</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+      </subjectMatterList>
+    </Employee>
+    <Employee id="11">
+      <id>4</id>
+      <code>5</code>
+      <name>Employee 5</name>
+      <jobDomain>MW</jobDomain>
+      <jobRole>TSE</jobRole>
+      <subjectMatterList id="12">
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>Shells</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>Virtualization</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>CFME</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+      </subjectMatterList>
+    </Employee>
+    <Employee id="13">
+      <id>5</id>
+      <code>6</code>
+      <name>Employee 6</name>
+      <jobDomain>PL</jobDomain>
+      <jobRole>TSE</jobRole>
+      <subjectMatterList id="14">
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>Stack</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>JON</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+        <null/>
+      </subjectMatterList>
+    </Employee>
+    <Employee id="15">
+      <id>6</id>
+      <code>7</code>
+      <name>Employee 7</name>
+      <jobDomain>EM</jobDomain>
+      <jobRole>TSE</jobRole>
+      <subjectMatterList id="16">
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>Messaging</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>Desktop</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>ESB</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+      </subjectMatterList>
+    </Employee>
+    <Employee id="17">
+      <id>7</id>
+      <code>8</code>
+      <name>Employee 8</name>
+      <jobDomain>MW</jobDomain>
+      <jobRole>TSE</jobRole>
+      <subjectMatterList id="18">
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>Spinalstack</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>JBoss_Security</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>ClusterHA</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+      </subjectMatterList>
+    </Employee>
+    <Employee id="19">
+      <id>8</id>
+      <code>9</code>
+      <name>Employee 9</name>
+      <jobDomain>PL</jobDomain>
+      <jobRole>ENG</jobRole>
+      <subjectMatterList id="20">
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>Identity_Management</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>Transactions_JCA_SQL</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>Anaconda</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+      </subjectMatterList>
+    </Employee>
+    <Employee id="21">
+      <id>9</id>
+      <code>10</code>
+      <name>Employee 10</name>
+      <jobDomain>MW</jobDomain>
+      <jobRole>SEG</jobRole>
+      <subjectMatterList id="22">
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>CFME</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>Storage</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>Services</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+      </subjectMatterList>
+    </Employee>
+    <Employee id="23">
+      <id>10</id>
+      <code>11</code>
+      <name>Employee 11</name>
+      <jobDomain>MW</jobDomain>
+      <jobRole>ENG</jobRole>
+      <subjectMatterList id="24">
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>Messaging</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>Virtualization</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>ClusterHA</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+      </subjectMatterList>
+    </Employee>
+    <Employee id="25">
+      <id>11</id>
+      <code>12</code>
+      <name>Employee 12</name>
+      <jobDomain>MW</jobDomain>
+      <jobRole>TSE</jobRole>
+      <subjectMatterList id="26">
+        <null/>
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>MRG</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>Kernel</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+      </subjectMatterList>
+    </Employee>
+    <Employee id="27">
+      <id>12</id>
+      <code>13</code>
+      <name>Employee 13</name>
+      <jobDomain>EM</jobDomain>
+      <jobRole>TSE</jobRole>
+      <subjectMatterList id="28">
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>Business_Rule_Frameworks</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>Containers</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>Identity_Management</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+      </subjectMatterList>
+    </Employee>
+    <Employee id="29">
+      <id>13</id>
+      <code>14</code>
+      <name>Employee 14</name>
+      <jobDomain>EM</jobDomain>
+      <jobRole>SEG</jobRole>
+      <subjectMatterList id="30">
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>Shift</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>Teiid_MMX</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>Web_Services</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+      </subjectMatterList>
+    </Employee>
+    <Employee id="31">
+      <id>14</id>
+      <code>15</code>
+      <name>Employee 15</name>
+      <jobDomain>EM</jobDomain>
+      <jobRole>ENG</jobRole>
+      <subjectMatterList id="32">
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>MRG</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>Stack</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>Low_volume</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+      </subjectMatterList>
+    </Employee>
+    <Employee id="33">
+      <id>15</id>
+      <code>16</code>
+      <name>Employee 16</name>
+      <jobDomain>PL</jobDomain>
+      <jobRole>TSE</jobRole>
+      <subjectMatterList id="34">
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>Filesystem</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>Low_volume</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>Virtualization</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+      </subjectMatterList>
+    </Employee>
+    <Employee id="35">
+      <id>16</id>
+      <code>17</code>
+      <name>Employee 17</name>
+      <jobDomain>EM</jobDomain>
+      <jobRole>TAM</jobRole>
+      <subjectMatterList id="36">
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>ClusterHA</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>JBoss_Security</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>Virtualization</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+      </subjectMatterList>
+    </Employee>
+    <Employee id="37">
+      <id>17</id>
+      <code>18</code>
+      <name>Employee 18</name>
+      <jobDomain>MW</jobDomain>
+      <jobRole>TSE</jobRole>
+      <subjectMatterList id="38">
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>Containers</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>Spinalstack</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>Desktop</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+      </subjectMatterList>
+    </Employee>
+    <Employee id="39">
+      <id>18</id>
+      <code>19</code>
+      <name>Employee 19</name>
+      <jobDomain>EM</jobDomain>
+      <jobRole>TAM</jobRole>
+      <subjectMatterList id="40">
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>Stack</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>Tools</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+        <null/>
+      </subjectMatterList>
+    </Employee>
+    <Employee id="41">
+      <id>19</id>
+      <code>20</code>
+      <name>Employee 20</name>
+      <jobDomain>PL</jobDomain>
+      <jobRole>SEG</jobRole>
+      <subjectMatterList id="42">
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>Stack</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>JON</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>Networking</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+      </subjectMatterList>
+    </Employee>
+    <Employee id="43">
+      <id>20</id>
+      <code>21</code>
+      <name>Employee 21</name>
+      <jobDomain>MW</jobDomain>
+      <jobRole>SEG</jobRole>
+      <subjectMatterList id="44">
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>Desktop</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>JBDS</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>Virtualization</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+      </subjectMatterList>
+    </Employee>
+    <Employee id="45">
+      <id>21</id>
+      <code>22</code>
+      <name>Employee 22</name>
+      <jobDomain>MW</jobDomain>
+      <jobRole>ENG</jobRole>
+      <subjectMatterList id="46">
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>JVM_Diagnostics</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>JBoss_Clustering</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>Anaconda</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+      </subjectMatterList>
+    </Employee>
+    <Employee id="47">
+      <id>22</id>
+      <code>23</code>
+      <name>Employee 23</name>
+      <jobDomain>EM</jobDomain>
+      <jobRole>SEG</jobRole>
+      <subjectMatterList id="48">
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>Low_volume</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>Gluster</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>JVM_Diagnostics</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+      </subjectMatterList>
+    </Employee>
+    <Employee id="49">
+      <id>23</id>
+      <code>24</code>
+      <name>Employee 24</name>
+      <jobDomain>EM</jobDomain>
+      <jobRole>SEG</jobRole>
+      <subjectMatterList id="50">
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>Stack</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>Virtualization</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>JVM_Diagnostics</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+      </subjectMatterList>
+    </Employee>
+    <Employee id="51">
+      <id>24</id>
+      <code>25</code>
+      <name>Employee 25</name>
+      <jobDomain>PL</jobDomain>
+      <jobRole>SEG</jobRole>
+      <subjectMatterList id="52">
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>Networking</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>Services</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>Ceph</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+      </subjectMatterList>
+    </Employee>
+    <Employee id="53">
+      <id>25</id>
+      <code>26</code>
+      <name>Employee 26</name>
+      <jobDomain>MW</jobDomain>
+      <jobRole>TSE</jobRole>
+      <subjectMatterList id="54">
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>Tools</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>Desktop</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>Gluster</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+      </subjectMatterList>
+    </Employee>
+    <Employee id="55">
+      <id>26</id>
+      <code>27</code>
+      <name>Employee 27</name>
+      <jobDomain>PL</jobDomain>
+      <jobRole>SEG</jobRole>
+      <subjectMatterList id="56">
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>JBoss_Portal</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>Messaging</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>Ceph</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+      </subjectMatterList>
+    </Employee>
+    <Employee id="57">
+      <id>27</id>
+      <code>28</code>
+      <name>Employee 28</name>
+      <jobDomain>MW</jobDomain>
+      <jobRole>TSE</jobRole>
+      <subjectMatterList id="58">
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>JON</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>JBoss_Security</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>Shift</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+      </subjectMatterList>
+    </Employee>
+    <Employee id="59">
+      <id>28</id>
+      <code>29</code>
+      <name>Employee 29</name>
+      <jobDomain>PL</jobDomain>
+      <jobRole>ENG</jobRole>
+      <subjectMatterList id="60">
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>JBDS</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>Kernel</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>Messaging</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+      </subjectMatterList>
+    </Employee>
+    <Employee id="61">
+      <id>29</id>
+      <code>30</code>
+      <name>Employee 30</name>
+      <jobDomain>MW</jobDomain>
+      <jobRole>TSE</jobRole>
+      <subjectMatterList id="62">
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>Shells</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>Transactions_JCA_SQL</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>Webservers</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+      </subjectMatterList>
+    </Employee>
+    <Employee id="63">
+      <id>30</id>
+      <code>31</code>
+      <name>Employee 31</name>
+      <jobDomain>MW</jobDomain>
+      <jobRole>SEG</jobRole>
+      <subjectMatterList id="64">
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>JBoss_Security</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>Desktop</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>Tools</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+      </subjectMatterList>
+    </Employee>
+    <Employee id="65">
+      <id>31</id>
+      <code>32</code>
+      <name>Employee 32</name>
+      <jobDomain>MW</jobDomain>
+      <jobRole>TAM</jobRole>
+      <subjectMatterList id="66">
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>Virtualization</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>Shift</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>JBDS</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+      </subjectMatterList>
+    </Employee>
+    <Employee id="67">
+      <id>32</id>
+      <code>33</code>
+      <name>Employee 33</name>
+      <jobDomain>PL</jobDomain>
+      <jobRole>TAM</jobRole>
+      <subjectMatterList id="68">
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>Containers</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>JBoss_Security</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>Shift</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+      </subjectMatterList>
+    </Employee>
+    <Employee id="69">
+      <id>33</id>
+      <code>34</code>
+      <name>Employee 34</name>
+      <jobDomain>EM</jobDomain>
+      <jobRole>SEG</jobRole>
+      <subjectMatterList id="70">
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>JBoss_Portal</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>Storage</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>JVM_Diagnostics</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+      </subjectMatterList>
+    </Employee>
+    <Employee id="71">
+      <id>34</id>
+      <code>35</code>
+      <name>Employee 35</name>
+      <jobDomain>EM</jobDomain>
+      <jobRole>TSE</jobRole>
+      <subjectMatterList id="72">
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>MRG</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>Tools</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>Storage</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+      </subjectMatterList>
+    </Employee>
+    <Employee id="73">
+      <id>35</id>
+      <code>36</code>
+      <name>Employee 36</name>
+      <jobDomain>MW</jobDomain>
+      <jobRole>TAM</jobRole>
+      <subjectMatterList id="74">
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>Low_volume</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>Containers</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+        <null/>
+      </subjectMatterList>
+    </Employee>
+    <Employee id="75">
+      <id>36</id>
+      <code>37</code>
+      <name>Employee 37</name>
+      <jobDomain>EM</jobDomain>
+      <jobRole>ENG</jobRole>
+      <subjectMatterList id="76">
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>FuseSource</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>Networking</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>Shift</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+      </subjectMatterList>
+    </Employee>
+    <Employee id="77">
+      <id>37</id>
+      <code>38</code>
+      <name>Employee 38</name>
+      <jobDomain>PL</jobDomain>
+      <jobRole>SEG</jobRole>
+      <subjectMatterList id="78">
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>SAP</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>JBoss_Base_AS</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>Spinalstack</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+      </subjectMatterList>
+    </Employee>
+    <Employee id="79">
+      <id>38</id>
+      <code>39</code>
+      <name>Employee 39</name>
+      <jobDomain>MW</jobDomain>
+      <jobRole>SEG</jobRole>
+      <subjectMatterList id="80">
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>CFME</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>JON</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>ClusterHA</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+      </subjectMatterList>
+    </Employee>
+    <Employee id="81">
+      <id>39</id>
+      <code>40</code>
+      <name>Employee 40</name>
+      <jobDomain>MW</jobDomain>
+      <jobRole>SEG</jobRole>
+      <subjectMatterList id="82">
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>Services</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>Low_volume</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+        <org.optaplanner.examples.officeseat.domain.SubjectMatter>Web_Services</org.optaplanner.examples.officeseat.domain.SubjectMatter>
+      </subjectMatterList>
+    </Employee>
+  </employeeList>
+  <seatList id="83">
+    <Seat id="84">
+      <id>0</id>
+      <col>0</col>
+      <row>0</row>
+    </Seat>
+    <Seat id="85">
+      <id>1</id>
+      <col>1</col>
+      <row>0</row>
+    </Seat>
+    <Seat id="86">
+      <id>2</id>
+      <col>2</col>
+      <row>0</row>
+    </Seat>
+    <Seat id="87">
+      <id>3</id>
+      <col>3</col>
+      <row>0</row>
+    </Seat>
+    <Seat id="88">
+      <id>4</id>
+      <col>4</col>
+      <row>0</row>
+    </Seat>
+    <Seat id="89">
+      <id>5</id>
+      <col>5</col>
+      <row>0</row>
+    </Seat>
+    <Seat id="90">
+      <id>6</id>
+      <col>6</col>
+      <row>0</row>
+    </Seat>
+    <Seat id="91">
+      <id>7</id>
+      <col>7</col>
+      <row>0</row>
+    </Seat>
+    <Seat id="92">
+      <id>5</id>
+      <col>0</col>
+      <row>1</row>
+    </Seat>
+    <Seat id="93">
+      <id>6</id>
+      <col>1</col>
+      <row>1</row>
+    </Seat>
+    <Seat id="94">
+      <id>7</id>
+      <col>2</col>
+      <row>1</row>
+    </Seat>
+    <Seat id="95">
+      <id>8</id>
+      <col>3</col>
+      <row>1</row>
+    </Seat>
+    <Seat id="96">
+      <id>9</id>
+      <col>4</col>
+      <row>1</row>
+    </Seat>
+    <Seat id="97">
+      <id>10</id>
+      <col>5</col>
+      <row>1</row>
+    </Seat>
+    <Seat id="98">
+      <id>11</id>
+      <col>6</col>
+      <row>1</row>
+    </Seat>
+    <Seat id="99">
+      <id>12</id>
+      <col>7</col>
+      <row>1</row>
+    </Seat>
+    <Seat id="100">
+      <id>10</id>
+      <col>0</col>
+      <row>2</row>
+    </Seat>
+    <Seat id="101">
+      <id>11</id>
+      <col>1</col>
+      <row>2</row>
+    </Seat>
+    <Seat id="102">
+      <id>12</id>
+      <col>2</col>
+      <row>2</row>
+    </Seat>
+    <Seat id="103">
+      <id>13</id>
+      <col>3</col>
+      <row>2</row>
+    </Seat>
+    <Seat id="104">
+      <id>14</id>
+      <col>4</col>
+      <row>2</row>
+    </Seat>
+    <Seat id="105">
+      <id>15</id>
+      <col>5</col>
+      <row>2</row>
+    </Seat>
+    <Seat id="106">
+      <id>16</id>
+      <col>6</col>
+      <row>2</row>
+    </Seat>
+    <Seat id="107">
+      <id>17</id>
+      <col>7</col>
+      <row>2</row>
+    </Seat>
+    <Seat id="108">
+      <id>15</id>
+      <col>0</col>
+      <row>3</row>
+    </Seat>
+    <Seat id="109">
+      <id>16</id>
+      <col>1</col>
+      <row>3</row>
+    </Seat>
+    <Seat id="110">
+      <id>17</id>
+      <col>2</col>
+      <row>3</row>
+    </Seat>
+    <Seat id="111">
+      <id>18</id>
+      <col>3</col>
+      <row>3</row>
+    </Seat>
+    <Seat id="112">
+      <id>19</id>
+      <col>4</col>
+      <row>3</row>
+    </Seat>
+    <Seat id="113">
+      <id>20</id>
+      <col>5</col>
+      <row>3</row>
+    </Seat>
+    <Seat id="114">
+      <id>21</id>
+      <col>6</col>
+      <row>3</row>
+    </Seat>
+    <Seat id="115">
+      <id>22</id>
+      <col>7</col>
+      <row>3</row>
+    </Seat>
+    <Seat id="116">
+      <id>20</id>
+      <col>0</col>
+      <row>4</row>
+    </Seat>
+    <Seat id="117">
+      <id>21</id>
+      <col>1</col>
+      <row>4</row>
+    </Seat>
+    <Seat id="118">
+      <id>22</id>
+      <col>2</col>
+      <row>4</row>
+    </Seat>
+    <Seat id="119">
+      <id>23</id>
+      <col>3</col>
+      <row>4</row>
+    </Seat>
+    <Seat id="120">
+      <id>24</id>
+      <col>4</col>
+      <row>4</row>
+    </Seat>
+    <Seat id="121">
+      <id>25</id>
+      <col>5</col>
+      <row>4</row>
+    </Seat>
+    <Seat id="122">
+      <id>26</id>
+      <col>6</col>
+      <row>4</row>
+    </Seat>
+    <Seat id="123">
+      <id>27</id>
+      <col>7</col>
+      <row>4</row>
+    </Seat>
+  </seatList>
+  <seatCol>8</seatCol>
+  <seatRow>5</seatRow>
+</OfficeSeatArrangement>

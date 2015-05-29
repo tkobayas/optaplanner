@@ -6,9 +6,7 @@ public enum JobRole {
 	TSE("TSE"),
 	SEG("SEG"),
 	TAM("TAM"),
-	LE("LE"),
-	ENG("ENG"),
-	MGR("MGR");
+	ENG("ENG");
 	
     public static JobRole valueOfCode(String code) {
         for (JobRole jobRole : values()) {

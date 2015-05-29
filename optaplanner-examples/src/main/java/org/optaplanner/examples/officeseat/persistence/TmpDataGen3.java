@@ -1,7 +1,6 @@
 package org.optaplanner.examples.officeseat.persistence;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.EnumSet;
 import java.util.List;
 
@@ -9,7 +8,7 @@ import org.optaplanner.examples.officeseat.domain.JobDomain;
 import org.optaplanner.examples.officeseat.domain.JobRole;
 import org.optaplanner.examples.officeseat.domain.SubjectMatter;
 
-public class TmpDataGen {
+public class TmpDataGen3 {
 
 	public static void main(String[] args) {
 			
@@ -17,10 +16,9 @@ public class TmpDataGen {
 			StringBuilder sb = new StringBuilder();
 			sb.append(i);
 			sb.append(",Employee " + i);
-			String jobDomain = getRandomStringFromEnum(JobDomain.class);
-			sb.append("," + jobDomain);
+			sb.append("," + getRandomStringFromEnum(JobDomain.class));
 			sb.append("," + getRandomStringFromEnum(JobRole.class));
-			List<String> subjectMatterList = getRandomSubjectMatterStringList(JobDomain.valueOfCode(jobDomain), 3);
+			List<String> subjectMatterList = getRandomStringListFromEnum(SubjectMatter.class, 3);
 			sb.append("," + subjectMatterList.get(0));
 			sb.append("," + subjectMatterList.get(1));
 			sb.append("," + subjectMatterList.get(2));
@@ -37,28 +35,19 @@ public class TmpDataGen {
 		return array[rand].toString();
 	}
 	
-	private static List<String> getRandomSubjectMatterStringList(JobDomain jobDomain, int num) {
+	private static List<String> getRandomStringListFromEnum(Class enumClass, int num) {
 		List<String> subjectMatterList = new ArrayList<String>();
 		
-		EnumSet set = EnumSet.allOf(SubjectMatter.class);
+		EnumSet set = EnumSet.allOf(enumClass);
 		Object[] array = set.toArray();
 		
-		Object[] range = null;
-		if (jobDomain == JobDomain.PL) {
-			range = Arrays.copyOfRange(array, 0, 18);
-		} else if (jobDomain == JobDomain.MW) {
-			range = Arrays.copyOfRange(array, 18, 33);
-		} else if (jobDomain == JobDomain.EM) {
-			range = Arrays.copyOfRange(array, 33, 39);
-		}
-		
-		if (range.length < num) {
-			throw new RuntimeException("range.length = " + range.length + ", num = " + num);
+		if (array.length < num) {
+			throw new RuntimeException("array.length = " + array.length + ", num = " + num);
 		}
 		
 		while (true) {
-			int rand = (int)(Math.random() * range.length);
-			String string = range[rand].toString();
+			int rand = (int)(Math.random() * array.length);
+			String string = array[rand].toString();
 			if (subjectMatterList.contains(string)) {
 				continue;
 			} else {

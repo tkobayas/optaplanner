@@ -38,6 +38,6 @@ public class Seat extends AbstractPersistable {
 	public long getDistance(Seat other) {
 		int horizontal = Math.abs(col - other.col);
 		int vertical = Math.abs(row - other.row);
-		return (horizontal * 2) * vertical; // column distance is worse.
+		return (long)((horizontal * 2 * horizontal * 2) + (vertical * vertical)); // column distance is worse.
 	}
 }

@@ -73,12 +73,12 @@ public class OfficeSeatImporter extends AbstractTxtSolutionImporter {
             officeSeat.setSeatRow(seatRow);
 
             List<Seat> seatList = new ArrayList<Seat>(seatCol * seatRow);
-            for (int i = 0; i < seatCol; i++) {
-                for (int j = 0; j < seatRow; j++) {
+            for (int i = 0; i < seatRow; i++) {
+                for (int j = 0; j < seatCol; j++) {
                     Seat seat = new Seat();
-                    seat.setId((long) ((i * seatCol) + j));
-                    seat.setCol(i);
-                    seat.setRow(j);
+                    seat.setId((long) ((i * seatRow) + j));
+                    seat.setCol(j);
+                    seat.setRow(i);
                     seatList.add(seat);
                 }
             }
@@ -97,7 +97,7 @@ public class OfficeSeatImporter extends AbstractTxtSolutionImporter {
                 Employee employee = new Employee();
                 employee.setId((long) id);
                 id++;
-                String[] lineTokens = splitByCommaAndTrim(bufferedReader.readLine(), 4, 8);
+                String[] lineTokens = splitByCommaAndTrim(bufferedReader.readLine(), 4, 12);
                 employee.setCode(Long.parseLong(lineTokens[0]));
                 employee.setName(lineTokens[1]);
                 employee.setJobDomain(JobDomain.valueOfCode(lineTokens[2]));
