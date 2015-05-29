@@ -85,10 +85,25 @@ public class OfficeSeatPanel extends SolutionPanel {
     private class SeatPanel extends JPanel {
 
         public SeatPanel(Seat seat) {
+        	
+        	int leftWidth = 2;
+        	int rightWidth = 2;
+        	
+        	if (seat != null) {
+        		// aisle
+        		if (seat.getCol() % 2 == 0) {
+        			leftWidth = 16;
+        		} else {
+        			rightWidth = 16;
+        		}
+        	}
+        	
+        	
             setLayout(new BorderLayout(5, 0));
             setBorder(BorderFactory.createCompoundBorder(
-                    BorderFactory.createLineBorder(Color.DARK_GRAY),
-                    BorderFactory.createEmptyBorder(2, 2, 2, 2)));
+            		BorderFactory.createEmptyBorder(2, leftWidth, 2, rightWidth),
+                    BorderFactory.createLineBorder(Color.DARK_GRAY)));
+                    
             Employee dummyEmployee = new Employee();
             dummyEmployee.setSeat(seat);
             setEmployee(dummyEmployee);
@@ -102,20 +117,17 @@ public class OfficeSeatPanel extends SolutionPanel {
                 return;
             }
             Seat seat = employee.getSeat();
-//        	if (seat != null) {
-//        		infoPanel.add(new JLabel("col = " + seat.getCol() + ", row = " + seat.getRow() ), BorderLayout.NORTH);
-//        	}
 
             JPanel jobPanel = new JPanel();
             jobPanel.setLayout(new BoxLayout(jobPanel, BoxLayout.Y_AXIS));
             jobPanel.setOpaque(false);
             jobPanel.add(new JLabel(employee.getName()));
+            jobPanel.add(new JLabel(" "));
             jobPanel.setOpaque(false);
             jobPanel.add(new JLabel(employee.getJobDomain().getCode() + "_" + employee.getJobRole().getCode()));
+            jobPanel.add(new JLabel(" "));
             List<SubjectMatter> subjectMatterList = employee.getSubjectMatterList();
             for (SubjectMatter subjectMatter : subjectMatterList) {
-            	System.out.println(employee);
-            	System.out.println(subjectMatter.getCode());
             	jobPanel.add(new JLabel(subjectMatter.getCode().substring(0, subjectMatter.getCode().length() > 10 ? 10 : subjectMatter.getCode().length())));
 			}
 
