@@ -77,7 +77,7 @@
       <id>6</id>
       <code>7</code>
       <name>Employee 7</name>
-      <jobDomain>EM</jobDomain>
+      <jobDomain>ET</jobDomain>
       <jobRole>TSE</jobRole>
       <subjectMatterList id="16">
         <org.optaplanner.examples.officeseat.domain.SubjectMatter>Messaging</org.optaplanner.examples.officeseat.domain.SubjectMatter>
@@ -149,7 +149,7 @@
       <id>12</id>
       <code>13</code>
       <name>Employee 13</name>
-      <jobDomain>EM</jobDomain>
+      <jobDomain>ET</jobDomain>
       <jobRole>TSE</jobRole>
       <subjectMatterList id="28">
         <org.optaplanner.examples.officeseat.domain.SubjectMatter>Business_Rule_Frameworks</org.optaplanner.examples.officeseat.domain.SubjectMatter>
@@ -161,7 +161,7 @@
       <id>13</id>
       <code>14</code>
       <name>Employee 14</name>
-      <jobDomain>EM</jobDomain>
+      <jobDomain>ET</jobDomain>
       <jobRole>SEG</jobRole>
       <subjectMatterList id="30">
         <org.optaplanner.examples.officeseat.domain.SubjectMatter>Shift</org.optaplanner.examples.officeseat.domain.SubjectMatter>
@@ -173,7 +173,7 @@
       <id>14</id>
       <code>15</code>
       <name>Employee 15</name>
-      <jobDomain>EM</jobDomain>
+      <jobDomain>ET</jobDomain>
       <jobRole>ENG</jobRole>
       <subjectMatterList id="32">
         <org.optaplanner.examples.officeseat.domain.SubjectMatter>MRG</org.optaplanner.examples.officeseat.domain.SubjectMatter>
@@ -197,7 +197,7 @@
       <id>16</id>
       <code>17</code>
       <name>Employee 17</name>
-      <jobDomain>EM</jobDomain>
+      <jobDomain>ET</jobDomain>
       <jobRole>TAM</jobRole>
       <subjectMatterList id="36">
         <org.optaplanner.examples.officeseat.domain.SubjectMatter>ClusterHA</org.optaplanner.examples.officeseat.domain.SubjectMatter>
@@ -221,7 +221,7 @@
       <id>18</id>
       <code>19</code>
       <name>Employee 19</name>
-      <jobDomain>EM</jobDomain>
+      <jobDomain>ET</jobDomain>
       <jobRole>TAM</jobRole>
       <subjectMatterList id="40">
         <org.optaplanner.examples.officeseat.domain.SubjectMatter>Stack</org.optaplanner.examples.officeseat.domain.SubjectMatter>
@@ -269,7 +269,7 @@
       <id>22</id>
       <code>23</code>
       <name>Employee 23</name>
-      <jobDomain>EM</jobDomain>
+      <jobDomain>ET</jobDomain>
       <jobRole>SEG</jobRole>
       <subjectMatterList id="48">
         <org.optaplanner.examples.officeseat.domain.SubjectMatter>Low_volume</org.optaplanner.examples.officeseat.domain.SubjectMatter>
@@ -281,7 +281,7 @@
       <id>23</id>
       <code>24</code>
       <name>Employee 24</name>
-      <jobDomain>EM</jobDomain>
+      <jobDomain>ET</jobDomain>
       <jobRole>SEG</jobRole>
       <subjectMatterList id="50">
         <org.optaplanner.examples.officeseat.domain.SubjectMatter>Stack</org.optaplanner.examples.officeseat.domain.SubjectMatter>
@@ -401,7 +401,7 @@
       <id>33</id>
       <code>34</code>
       <name>Employee 34</name>
-      <jobDomain>EM</jobDomain>
+      <jobDomain>ET</jobDomain>
       <jobRole>SEG</jobRole>
       <subjectMatterList id="70">
         <org.optaplanner.examples.officeseat.domain.SubjectMatter>JBoss_Portal</org.optaplanner.examples.officeseat.domain.SubjectMatter>
@@ -413,7 +413,7 @@
       <id>34</id>
       <code>35</code>
       <name>Employee 35</name>
-      <jobDomain>EM</jobDomain>
+      <jobDomain>ET</jobDomain>
       <jobRole>TSE</jobRole>
       <subjectMatterList id="72">
         <org.optaplanner.examples.officeseat.domain.SubjectMatter>MRG</org.optaplanner.examples.officeseat.domain.SubjectMatter>
@@ -437,7 +437,7 @@
       <id>36</id>
       <code>37</code>
       <name>Employee 37</name>
-      <jobDomain>EM</jobDomain>
+      <jobDomain>ET</jobDomain>
       <jobRole>ENG</jobRole>
       <subjectMatterList id="76">
         <org.optaplanner.examples.officeseat.domain.SubjectMatter>FuseSource</org.optaplanner.examples.officeseat.domain.SubjectMatter>

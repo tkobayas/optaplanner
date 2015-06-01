@@ -5,7 +5,7 @@ public enum JobDomain {
 
 	PL("PL"),
 	MW("MW"),
-	EM("EM");
+	ET("ET");
 	
     public static JobDomain valueOfCode(String code) {
         for (JobDomain jobDomain : values()) {

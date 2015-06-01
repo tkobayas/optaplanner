@@ -149,7 +149,7 @@
       <id>12</id>
       <code>13</code>
       <name>Employee 13</name>
-      <jobDomain>EM</jobDomain>
+      <jobDomain>ET</jobDomain>
       <jobRole>TSE</jobRole>
       <subjectMatterList id="28">
         <org.optaplanner.examples.officeseat.domain.SubjectMatter>CFME</org.optaplanner.examples.officeseat.domain.SubjectMatter>
@@ -233,7 +233,7 @@
       <id>19</id>
       <code>20</code>
       <name>Employee 20</name>
-      <jobDomain>EM</jobDomain>
+      <jobDomain>ET</jobDomain>
       <jobRole>TSE</jobRole>
       <subjectMatterList id="42">
         <org.optaplanner.examples.officeseat.domain.SubjectMatter>Spinalstack</org.optaplanner.examples.officeseat.domain.SubjectMatter>
@@ -329,7 +329,7 @@
       <id>27</id>
       <code>28</code>
       <name>Employee 28</name>
-      <jobDomain>EM</jobDomain>
+      <jobDomain>ET</jobDomain>
       <jobRole>SEG</jobRole>
       <subjectMatterList id="58">
         <org.optaplanner.examples.officeseat.domain.SubjectMatter>Gluster</org.optaplanner.examples.officeseat.domain.SubjectMatter>
@@ -365,7 +365,7 @@
       <id>30</id>
       <code>31</code>
       <name>Employee 31</name>
-      <jobDomain>EM</jobDomain>
+      <jobDomain>ET</jobDomain>
       <jobRole>ENG</jobRole>
       <subjectMatterList id="64">
         <org.optaplanner.examples.officeseat.domain.SubjectMatter>Gluster</org.optaplanner.examples.officeseat.domain.SubjectMatter>
@@ -389,7 +389,7 @@
       <id>32</id>
       <code>33</code>
       <name>Employee 33</name>
-      <jobDomain>EM</jobDomain>
+      <jobDomain>ET</jobDomain>
       <jobRole>TSE</jobRole>
       <subjectMatterList id="68">
         <org.optaplanner.examples.officeseat.domain.SubjectMatter>CFME</org.optaplanner.examples.officeseat.domain.SubjectMatter>
@@ -413,7 +413,7 @@
       <id>34</id>
       <code>35</code>
       <name>Employee 35</name>
-      <jobDomain>EM</jobDomain>
+      <jobDomain>ET</jobDomain>
       <jobRole>ENG</jobRole>
       <subjectMatterList id="72">
         <org.optaplanner.examples.officeseat.domain.SubjectMatter>Shift</org.optaplanner.examples.officeseat.domain.SubjectMatter>

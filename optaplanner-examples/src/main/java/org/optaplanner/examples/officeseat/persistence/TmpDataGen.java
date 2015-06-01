@@ -48,7 +48,7 @@ public class TmpDataGen {
 			range = Arrays.copyOfRange(array, 0, 18);
 		} else if (jobDomain == JobDomain.MW) {
 			range = Arrays.copyOfRange(array, 18, 33);
-		} else if (jobDomain == JobDomain.EM) {
+		} else if (jobDomain == JobDomain.ET) {
 			range = Arrays.copyOfRange(array, 33, 39);
 		}
 		
